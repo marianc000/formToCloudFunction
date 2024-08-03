@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" type="module"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <form id="form" action="https://europe-west6-cloud-functions-430718.cloudfunctions.net/multipart">
+        <div><label>Title</label><input type="text" name="title" value="Test"></div>
+        <div><label>Label</label>
+          <select name="label">
+            <option value="red" selected>Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <div><label>Images</label><input type="file" name="images" multiple accept="image/*"></div>
+        <div><label>Documents</label><input type="file" name="documents" multiple accept=".pdf"></div>
+      
+
+        <div><button type="button" id="btn">Submit</button></div>
+      </form>
+    </div>
+    <div id="responseDiv"></div>
+  </div>
+</body>
+</html>
